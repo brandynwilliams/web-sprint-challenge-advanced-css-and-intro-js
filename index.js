@@ -231,6 +231,7 @@ Example, if getArtistByIndex is invoked with the artists array and the number 0,
 function getArtistByIndex(array, index) {
   return `the artist at index ${index} is ${array[index].name}`
   }  
+  
   console.log(getArtistByIndex(artists, 0))
 
 
@@ -255,6 +256,7 @@ function get20s(arr){
    }
  return twenty
 }
+
 console.log(get20s(artists))
 
 
@@ -272,6 +274,7 @@ function removeArtist(array, index){
   array.splice(index, 1)
   return array.length
  }
+
  console.log(removeArtist(artists, 0))
  
 
@@ -305,6 +308,7 @@ function addArtist(array){
   array.push(new_artist)
   return array;
 }
+
 console.log(addArtist(artists))
 
 
@@ -326,8 +330,8 @@ function lotsOfArt(array){
   }
   return new_array;
   }
-  console.log(lotsOfArt(artists))
 
+  console.log(lotsOfArt(artists))
 
 /* ***** END OF TASKS ***** */
 

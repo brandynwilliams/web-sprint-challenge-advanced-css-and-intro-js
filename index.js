@@ -231,7 +231,7 @@ Example, if getArtistByIndex is invoked with the artists array and the number 0,
 function getArtistByIndex(array, index) {
   return `the artist at index ${index} is ${array[index].name}`
   }  
-  
+
   console.log(getArtistByIndex(artists, 0))
 
 
@@ -245,21 +245,17 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(arr){
-  let twenty = [];
-  arr[5].years = 1904 - 1989
-  arr[17].years = 1907 - 1954
-   for (let i = 0; i < arr.length; i++) {
-     if (arr[i].years > 1900 || arr[i].years < 2000) {
-       twenty.push(arr[i].name) 
-     } 
-   }
- return twenty
+function get20s(arr) {
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    const dates = arr[i].years.split(' ');
+    let dateArr = arr[i].years.split(dates[1]);
+    if(dateArr[0] > 1899 & dateArr[1] < 2001){
+      newArr.push(arr[i].name);
+    }
+  }
+  return newArr
 }
-
-console.log(get20s(artists))
-
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
